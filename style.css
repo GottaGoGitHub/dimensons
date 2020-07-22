@@ -25,18 +25,32 @@ video {
   min-height: 100%;
 }
 
-.outer {
-  position: relative;
-  width: auto;
+.text {
+  position: fixed;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  color: white;
 }
 
-.box-top {
+video {
+  width: 100vh;
+}
+
+.outer {
+  position: relative;
+  height: 100vh;
+}
+
+/* .box-top {
   top: 0px;
   position: absolute;
   background-color: yellow;
-  width: 25%;
-  height: 25%;
-  z-index: 1;
 }
 
 .box-tmid {
@@ -76,17 +90,17 @@ video {
 
 .right {
   left: 75%;
+} */
+
+.box-container {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: white;
 }
 
-.text {
-  position: fixed;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 4%;
-  padding-bottom: 4%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 25px;
-  color: white;
+.box-top {
+  z-index: 1;
 }
