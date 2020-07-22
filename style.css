@@ -1,8 +1,56 @@
-body {
-  margin: 0;
-  box-sizing: content-box;
+@font-face {
+  font-family: LetterGothicStd;
+  src: url('fonts/LetterGothicStd.otf') format('opentype');
 }
 
-main {
-  display: block;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  background-color: black;
+  box-sizing: content-box;
+  font-family: LetterGothicStd;
+}
+
+.outer {
+  position: relative;
+}
+
+.box-top {
+  top: 0px;
+  position: absolute;
+  background-color: yellow;
+  width: 25%;
+  height: 25%;
+  z-index: 1;
+}
+
+.box-tmid {
+  top: 25%;
+  position: absolute;
+  background-color: red;
+  width: 25%;
+  height: 25%;
+  z-index: 1;
+}
+
+.text {
+  position: fixed;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  color: white;
 }
