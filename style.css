@@ -20,11 +20,48 @@ html {
   font-family: LetterGothicStd;
 }
 
-video {
-  min-width: 100%;
-  min-height: 100%;
+/* PRE VIDEO SCREEN */
+#acceptCam {
+  background-color: grey;
+  position: fixed;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
 }
 
+.ctr {
+  display: flex;
+  justify-content: center;
+}
+
+/* VIDEO SCREEN */
+video {
+  width: 100%;
+}
+
+.outer {
+  position: relative;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: white;
+  opacity: 0.5;
+}
+
+/* END SCREEN */
 .text {
   position: fixed;
   padding-left: 10%;
@@ -36,70 +73,4 @@ video {
   transform: translate(-50%, -50%);
   border-radius: 25px;
   color: white;
-}
-
-video {
-  width: 100vh;
-}
-
-.outer {
-  height: 100vh;
-}
-
-/* .box-top {
-  top: 0px;
-  position: absolute;
-  background-color: yellow;
-}
-
-.box-tmid {
-  top: 25%;
-  position: absolute;
-  background-color: red;
-  width: 25%;
-  height: 25%;
-  z-index: 1;
-}
-
-.box-bmid {
-  top: 50%;
-  position: absolute;
-  background-color: green;
-  width: 25%;
-  height: 25%;
-  z-index: 1;
-}
-
-.box-bot {
-  top: 75%;
-  position: absolute;
-  background-color: purple;
-  width: 25%;
-  height: 25%;
-  z-index: 1;
-}
-
-.left-mid {
-  left: 25%;
-}
-
-.right-mid {
-  left: 50%;
-}
-
-.right {
-  left: 75%;
-} */
-
-.box-container {
-  position: relative;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  background-color: white;
-}
-
-.box-top {
-  z-index: 1;
 }
